@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Destructuring!</title>
+</head>
+<body>
+<script>
+  const person = {
+    first: 'Wes',
+    last: 'Bos',
+    country: 'Canada',
+    city: 'Hamilton',
+    twitter: '@wesbos'
+  };
+//Destructuring allows us to extract data from arrays, objects, maps and sets into their own variables
+  const { first, last, twitter } = person; // Take a variable called first, a variable called last, a variable called twitter and take them from person.
+
+  const wes = {
+    first: "Wes",
+    last: "Bos",
+    links: {
+      social: {
+        twitter: "https://twitter.com/wesbos",
+        facebook: "https://facebook.com/wesbos.developer",
+      },
+      web: {
+        blog: "https://wesbos.com"
+      }
+    }
+  }
+const { twitter:tweet, facebook:fb } = wes.link.social // when we have nested data. Also the "twitter:tweet" is when we want to have the value in the twitter key and store in a variable called tweet.
+
+const settings = {width: 300, color: "black"} // height, fontSize needed
+const { width = 100, height = 100, color = "blue", fontSize = 25 } = settings; // assigning default.
+
+// Object Destructuring with variable renaming & default values
+const { w: width = 400, h: height = 500 } = { w: 800 }
+// width and height are created. w and h are being destructured. w is destructured from w:800. h tries to be destructured from the right but it falls back to 500.
+
+
+</script>
+</body>
+</html>
