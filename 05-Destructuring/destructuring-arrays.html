@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Destructuring Arrays</title>
+</head>
+<body>
+<script>
+  const details = ['Wes Bos', 123, 'wesbos.com'];
+  const [ name, id, website ] = details; 
+
+  console.log(name, id, website);
+   
+  const data = "Basketball,Sports,90210,23";
+  const [itemName, category, sku, inventory] = data.split(","); //data.split(",") creates an array
+
+  const data = "Basketball,Sports,90210,23,wes,bos,cool";
+  const [itemName, category, sku, inventory] = data.split(","); //wes, bos, cool won't be assigned because we did not destructure them.
+
+  const team = ["wes", "Harry", "sarah", "keegan", "riker"];
+
+  const [captain, assistant, ...players] = team; // here it uses the rest operator with which it assigns the rest of the values in the players variable.
+
+</script>
+</body>
+</html>
