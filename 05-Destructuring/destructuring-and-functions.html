@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Destructuring in Action!</title>
+</head>
+<body>
+<script>
+  function convertCurrency(amount) {
+    const converted = {
+      USD: amount * 0.76,
+      GPB: amount * 0.53,
+      AUD: amount * 1.01,
+      MEX: amount * 13.30
+    };
+    return converted;
+  }
+
+  const { USD, GPB, MEX, AUD } = convertCurrency(100); // Easy way to get the ammount instead of typing covertCurrency(100).USD etc. for every value. Also the order does not matter in which we declare the values because it's an object. We also don't need to destructure values we don't need.
+
+  function tipCalc({ total, tip = 0.15, tax = 0.13 } = {}) { //the ({.....}) = {} is so when you pass in tipCalc(); without any argument
+    return total + (tip * total) + (tax * total);
+  }
+
+  const bill = tipCalc({ tip: 0.2, total: 200 }); // neat way to put in arguments that don't need to be in a specific order and we don't need to pass in undefined if we want the argument to be the default value
+  console.log(bill);
+  
+</script>
+</body>
+</html>
