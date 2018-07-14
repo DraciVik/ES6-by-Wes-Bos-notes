@@ -1,11 +1,11 @@
 # ES6-by-Wes-Bos-notes
 This is where I'll keep my notes that I take from the Wes Bos tutorial.
 
-1. [New-Variables]()
-2. [Arrow functions]()
-3. [Template Strings]()
-4. [Additional String Improvements]()
-5. [Destructuring]()
+1. [New-Variables](https://github.com/DraciVik/ES6-by-Wes-Bos-notes/tree/master/01-New-Variables)
+2. [Arrow functions](https://github.com/DraciVik/ES6-by-Wes-Bos-notes/tree/master/02-Arrow-functions)
+3. [Template Strings](https://github.com/DraciVik/ES6-by-Wes-Bos-notes/tree/master/03-Template-Strings)
+4. [Additional String Improvements](https://github.com/DraciVik/ES6-by-Wes-Bos-notes/tree/master/04-Additional-String-Improvements)
+5. [Destructuring](https://github.com/DraciVik/ES6-by-Wes-Bos-notes/tree/master/05-Destructuring)
 6. [Iterables & Looping]()
 7. [An Array of Improvements]()
 8. [Say Hello to ...Spread and ...Rest]()
