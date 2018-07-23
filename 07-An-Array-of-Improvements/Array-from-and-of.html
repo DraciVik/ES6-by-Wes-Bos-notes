@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Array .from() and .of()</title>
+</head>
+<div class="people">
+  <p>Wes</p>
+  <p>Kait</p>
+  <p>Snickers</p>
+</div>
+
+<body>
+  <script>
+    //  Array .from() and .of() are not on the prototype, they are on the array itself
+    Array.from() //Will take something that is array ish and turn it into a true array - We need it for example when working with DOM elements
+
+    const people = document.querySelectorAll(".people p");
+    const names = people.map(person => person.textContent); //people.map is not a function - It's a NodeList - array ish
+    const peopleArray = Array.from(people); // A true array now
+    const names = peopleArray.map(person => person.textContent); //Works now.
+
+    //Array.from() takes a second argument which is a map function which allows us to modify the data as we are creating it.
+
+    const people = document.querySelectorAll(".people p");
+    const peopleArray = Array.from(people, person => {
+      return person.textContent;
+    }
+ console.log(peopleArray);
+
+    //Another use case is when we want to convert the arguments object into an actual array
+
+    function sumAll() {
+      const nums = Array.from(arguments);
+      console.log(nums); // arguments is not an array. It's array ish
+      return nums.reduce((prev, next) => prev + next, 0); // Works now
+    }
+
+    sumAll(2, 23, 234, 12, 45, 23, 323, 434);
+
+
+    const ages = Array.of(12, 34, 23, "sdf", 234); //Preety self explanatory
+
+  </script>
+</body>
+
+</html>
