@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Iterables & Looping</title>
+</head>
+<body>
+<script>
+const cuts = ["Chuck", "Brisket", "Shank", "Short Rib"];
+
+// for (const cut of cuts) { // Works fine if all we want are the values of the indexes
+//   console.log(cut);
+// }
+
+// for (const [i, cut] of cuts.entries()) {  // [i, cut] is with destructuring, cuts.entries() brings us an iterator.
+// //   console.log(i, cut);
+// // }
+
+// function addUpNumbers() { //Since we dont know how many arguments we might have we can use the "arguments" special word which returns an array ish type where it will give us all of the arguments
+// console.log(arguments) //arguments is just a simple list and we can't use all the usual methods as the array prototype. If we want we can covert it into an array with Array.from(arguments);
+// // We can use the "for of" iterator because it's from a symbol
+
+//   let total = 0;
+//   for (const num of arguments) { // if we don't want to convert into an array we can use for of
+//     total += num;
+//   }
+//   console.log(total);
+//   return total;
+
+// }
+
+// addUpNumbers(10, 23,43, 23, 212, 34, 434);
+
+const name = "Wes Bos";
+
+for (const char of name) {
+  console.log(char);
+
+}
+
+</script>
+</body>
+</html>
